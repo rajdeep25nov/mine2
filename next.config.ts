@@ -2,7 +2,7 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export', // Enable static HTML export
+  // output: 'export', // Removed for Node.js server deployment
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true, // Required for static export without a custom image loader
+    unoptimized: true, // Kept to simplify image deployment, can be changed later
     remotePatterns: [
       {
         protocol: 'https',
